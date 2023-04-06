@@ -7,7 +7,7 @@ export default function TodoList({todoListData}) {
         {todoListData.map((val, key) => {
             return (
                 <div key={key} style={{ marginTop: '10px'}}>
-                    <SingleTodo title={val}/>
+                    <SingleTodo title={val.title} isCompleted={val.isCompleted}/>
                 </div>
             )
         })}
