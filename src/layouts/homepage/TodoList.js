@@ -1,13 +1,15 @@
 import React from 'react'
 import SingleTodo from '../components/todoList/SingleTodo'
 
-const todoListData = ['First Item', 'Second Item', 'Third Item'];
-
-export default function TodoList() {
+export default function TodoList({todoListData}) {
   return (
     <div>
         {todoListData.map((val, key) => {
-            return <SingleTodo key={key} title={val}/>
+            return (
+                <div key={key} style={{ marginTop: '10px'}}>
+                    <SingleTodo title={val}/>
+                </div>
+            )
         })}
     </div>
   )
